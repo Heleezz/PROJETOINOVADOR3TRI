@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site educativo sobre radiação de celulares, efeitos na saúde e evidências científicas">
+    <title>BioEletro - Entenda a Radiação dos Celulares</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="logo-highlight">Bio</span>Eletro
+            </div>
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#entenda">Entenda</a></li>
+                <li><a href="#corpo">No Corpo</a></li>
+                <li><a href="#ciencia">Ciência</a></li>
+                <li><a href="#mitos">Mitos</a></li>
+                <li><a href="#laboratorio">Laboratório</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#fontes">Fontes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-background" aria-hidden="true">
+                <svg viewBox="0 0 100 100" class="hero-waves">
+                    <circle cx="50" cy="50" r="10" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.3"/>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>
+                    Seu celular emite radiação. <br>
+                    <span class="text-cyan">Você sabe o que isso significa?</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Entenda como as ondas eletromagnéticas permitem a comunicação móvel, o que a ciência já descobriu sobre seus efeitos e como separar evidências de mitos.
+                </p>
+                <div class="hero-warning">
+                    <p>⚠️ Radiação não é sinônimo de radioatividade.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#entenda" class="btn btn-primary">Explorar a ciência</a>
+                    <a href="#quiz" class="btn btn-secondary">Testar meus conhecimentos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entenda a Radiação -->
+        <section id="entenda" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Entenda a Radiação</h2>
+                <p class="section-intro">
+                    A radiação eletromagnética está presente em todo o universo. Ela se manifesta de diferentes formas, desde a luz visível até as ondas de rádio utilizadas pelos celulares.
+                </p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">📡</div>
+                        <h3>O que é radiação eletromagnética?</h3>
+                        <p>É uma forma de energia que se propaga através de ondas eletromagnéticas. Inclui desde ondas de rádio até raios gama, passando pela luz visível.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h3>Ionizante vs Não Ionizante</h3>
+                        <p><strong>Ionizante:</strong> Possui energia suficiente para remover elétrons dos átomos (raios X, raios gama). <strong>Não ionizante:</strong> Não possui essa energia (ondas de rádio, micro-ondas, luz visível).</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h3>Celulares e Radiofrequência</h3>
+                        <p>Celulares utilizam ondas de radiofrequência (RF), um tipo de radiação não ionizante, para se comunicar com antenas e transmitir informações.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔋</div>
+                        <h3>Ajuste de Potência</h3>
+                        <p>O celular ajusta automaticamente sua potência de transmissão conforme a distância da antena e as condições do sinal.</p>
+                    </div>
+                </div>
+
+                <!-- Espectro Eletromagnético Interativo -->
+                <div class="spectrum-container">
+                    <h3 class="spectrum-title">Espectro Eletromagnético</h3>
+                    <p class="spectrum-intro">Clique em cada faixa para saber mais:</p>
+                    <div class="spectrum-bar">
+                        <button class="spectrum-item" data-type="radio" aria-label="Ondas de rádio">
+                            <span>Ondas de Rádio</span>
+                        </button>
+                        <button class="spectrum-item" data-type="microwave" aria-label="Micro-ondas">
+                            <span>Micro-ondas</span>
+                        </button>
+                        <button class="spectrum-item" data-type="infrared" aria-label="Infravermelho">
+                            <span>Infravermelho</span>
+                        </button>
+                        <button class="spectrum-item" data-type="visible" aria-label="Luz visível">
+                            <span>Visível</span>
+                        </button>
+                        <button class="spectrum-item" data-type="uv" aria-label="Ultravioleta">
+                            <span>UV</span>
+                        </button>
+                        <button class="spectrum-item" data-type="xray" aria-label="Raios X">
+                            <span>Raios X</span>
+                        </button>
+                        <button class="spectrum-item" data-type="gamma" aria-label="Raios gama">
+                            <span>Gama</span>
+                        </button>
+                    </div>
+                    <div id="spectrum-info" class="spectrum-info" role="region" aria-live="polite">
+                        <p class="spectrum-placeholder">Selecione uma faixa do espectro para ver detalhes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O que acontece no corpo -->
+        <section id="corpo" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">O que acontece no corpo humano?</h2>
+                <p class="section-intro">
+                    A radiofrequência interage com os tecidos do corpo de maneiras específicas. Entenda os mecanismos físicos envolvidos.
+                </p>
+
+                <div class="body-grid">
+                    <div class="body-illustration">
+                        <svg viewBox="0 0 200 400" class="body-svg">
+                            <!-- Cabeça -->
+                            <circle cx="100" cy="60" r="40" class="body-part" data-region="cabeca" tabindex="0" role="button" aria-label="Selecionar região: Cabeça"/>
+                            <!-- Tronco -->
+                            <rect x="60" y="110" width="80" height="120" rx="10" class="body-part" data-region="tronco" tabindex="0" role="button" aria-label="Selecionar região: Tronco"/>
+                            <!-- Braços -->
+                            <rect x="20" y="120" width="30" height="100" rx="15" class="body-part" data-region="mao" tabindex="0" role="button" aria-label="Selecionar região: Mão"/>
+                            <rect x="150" y="120" width="30" height="100" rx="15" class="body-part" data-region="mao" tabindex="0" role="button" aria-label="Selecionar região: Mão"/>
+                            <!-- Pernas -->
+                            <rect x="65" y="240" width="30" height="120" rx="15" class="body-part" data-region="pele" tabindex="0" role="button" aria-label="Selecionar região: Pele"/>
+                            <rect x="105" y="240" width="30" height="120" rx="15" class="body-part" data-region="pele" tabindex="0" role="button" aria-label="Selecionar região: Pele"/>
+                        </svg>
+                        <p class="body-caption">Ilustração conceitual - Clique em uma região para saber mais</p>
+                    </div>
+                    <div id="body-info" class="body-info" role="region" aria-live="polite">
+                        <p class="body-placeholder">Selecione uma região do corpo para ver como a radiofrequência interage com os tecidos.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Importante:</strong> A presença de radiofrequência não significa automaticamente que exista dano biológico. É necessário considerar a intensidade, as condições de exposição, os mecanismos físicos envolvidos e as evidências disponíveis.</p>
+                </div>
+
+                <div class="sar-explanation">
+                    <h3>O que é SAR?</h3>
+                    <p><strong>SAR (Taxa de Absorção Específica)</strong> é a medida da energia de radiofrequência absorvida por unidade de massa do tecido corporal, expressa em W/kg. É um indicador utilizado para avaliar a exposição, mas não representa diretamente o risco à saúde.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- O que diz a ciência -->
+        <section id="ciencia" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">O que diz a ciência?</h2>
+                <p class="section-intro">
+                    A comunidade científica avalia continuamente as evidências sobre os efeitos da radiofrequência na saúde. Entenda o que já foi consolidado e o que ainda está em investigação.
+                </p>
+
+                <div class="science-cards">
+                    <div class="science-card">
+                        <h3>Evidências Consolidadas</h3>
+                        <ul>
+                            <li>A radiofrequência dos celulares é não ionizante e não possui energia suficiente para ionizar átomos ou quebrar ligações de DNA diretamente.</li>
+                            <li>O principal efeito biológico conhecido em níveis de exposição típicos é o aquecimento leve dos tecidos (efeito térmico).</li>
+                            <li>O corpo humano possui mecanismos eficientes para dissipar esse calor.</li>
+                        </ul>
+                    </div>
+                    <div class="science-card">
+                        <h3>Classificação IARC (2011)</h3>
+                        <p>A Agência Internacional de Pesquisa em Câncer classificou campos eletromagnéticos de radiofrequência como <strong>Grupo 2B: possivelmente carcinogênicos para humanos</strong>.</p>
+                        <p class="science-note">Isso indica evidência limitada de possível carcinogenicidade, não uma demonstração de que celulares causam câncer. É um convite para mais pesquisas.</p>
+                    </div>
+                    <div class="science-card">
+                        <h3>Perigo vs Risco</h3>
+                        <p><strong>Perigo:</strong> Capacidade de um agente causar dano em determinadas condições.</p>
+                        <p><strong>Risco:</strong> Probabilidade de ocorrer dano considerando a exposição e as circunstâncias.</p>
+                        <p class="science-note">A classificação de perigo não significa que o risco seja alto. A água pode ser perigosa em grandes quantidades, mas o risco depende do contexto.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline">
+                    <h3 class="timeline-title">Linha do Tempo das Avaliações Científicas</h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2011</div>
+                            <div class="timeline-content">
+                                <h4>IARC - Grupo 2B</h4>
+                                <p>Campos eletromagnéticos de radiofrequência classificados como possivelmente carcinogênicos para humanos.</p>
+                                <a href="https://monographs.iarc.who.int/monograph/M102" target="_blank" rel="noopener" class="timeline-link">Ver fonte →</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2014</div>
+                            <div class="timeline-content">
+                                <h4>OMS - Folha Informativa</h4>
+                                <p>Organização Mundial da Saúde publica revisão sobre campos eletromagnéticos e saúde pública.</p>
+                                <a href="https://www.who.int/news-room/fact-sheets/detail/electromagnetic-fields-and-public-health-mobile-phones" target="_blank" rel="noopener" class="timeline-link">Ver fonte →</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-content">
+                                <h4>Anatel - Regulamentação</h4>
+                                <p>Agência Nacional de Telecomunicações atualiza limites de exposição humana a campos eletromagnéticos no Brasil.</p>
+                                <a href="https://www.gov.br/anatel/pt-br/regulado/frequencia-e-radiofrequencia/campos-eletromagneticos" target="_blank" rel="noopener" class="timeline-link">Ver fonte →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="science-limitations">
+                    <h3>Limitações dos Estudos</h3>
+                    <ul>
+                        <li>Estudos observacionais não podem estabelecer causalidade direta, apenas associações.</li>
+                        <li>Estudos de longo prazo são difíceis de realizar devido ao tempo necessário e mudanças tecnológicas.</li>
+                        <li>A memória dos participantes sobre uso de celulares pode ser imprecisa.</li>
+                        <li>Diferentes tecnologias e frequências tornam difícil generalizar resultados.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mitos e Verdades -->
+        <section id="mitos" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Mitos e Verdades</h2>
+                <p class="section-intro">
+                    Clique em cada afirmação para ver a explicação científica detalhada.
+                </p>
+
+                <div class="myths-grid" id="myths-container">
+                    <!-- Cards serão inseridos via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Laboratório Interativo -->
+        <section id="laboratorio" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Laboratório Interativo</h2>
+                <p class="section-intro">
+                    Ajuste os parâmetros abaixo para entender como diferentes fatores influenciam a exposição à radiofrequência.
+                </p>
+                <p class="section-note">
+                    Nota: Estes são modelos conceituais educativos, não medições reais de dispositivos específicos.
+                </p>
+
+                <div class="lab-grid">
+                    <!-- Simulador A: Distância -->
+                    <div class="lab-card">
+                        <h3>📏 Simulador de Distância</h3>
+                        <div class="lab-control">
+                            <label for="distance-slider">
+                                Distância do corpo: <span id="distance-value" class="value-highlight">5 cm</span>
+                            </label>
+                            <input 
+                                type="range" 
+                                id="distance-slider" 
+                                min="1" 
+                                max="50" 
+                                value="5"
+                                aria-valuemin="1"
+                                aria-valuemax="50"
+                                aria-valuenow="5"
+                                aria-label="Controle deslizante de distância em centímetros"
+                            >
+                        </div>
+                        <div class="lab-result">
+                            <p class="lab-result-title">Nível de Exposição Relativo:</p>
+                            <div class="lab-bar">
+                                <div id="distance-bar" class="lab-bar-fill" style="width: 80%"></div>
+                            </div>
+                            <p class="lab-explanation">
+                                A intensidade do campo eletromagnético diminui drasticamente com a distância. Manter o celular a apenas alguns centímetros do corpo reduz a exposição de forma significativa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Simulador B: Sinal -->
+                    <div class="lab-card">
+                        <h3>📶 Simulador de Sinal</h3>
+                        <div class="lab-buttons">
+                            <button class="lab-btn active" data-signal="strong">Forte</button>
+                            <button class="lab-btn" data-signal="medium">Médio</button>
+                            <button class="lab-btn" data-signal="weak">Fraco</button>
+                        </div>
+                        <div class="lab-result">
+                            <p class="lab-result-title">Comportamento do Aparelho:</p>
+                            <p id="signal-explanation" class="lab-explanation">
+                                Com sinal forte, o celular opera na potência mínima necessária, resultando na menor exposição possível.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Simulador C: Tempo -->
+                    <div class="lab-card">
+                        <h3>⏱️ Simulador de Tempo</h3>
+                        <div class="lab-control">
+                            <label for="time-slider">
+                                Tempo de uso: <span id="time-value" class="value-highlight">30 minutos</span>
+                            </label>
+                            <input 
+                                type="range" 
+                                id="time-slider" 
+                                min="5" 
+                                max="240" 
+                                value="30"
+                                step="5"
+                                aria-valuemin="5"
+                                aria-valuemax="240"
+                                aria-valuenow="30"
+                                aria-label="Controle deslizante de tempo em minutos"
+                            >
+                        </div>
+                        <div class="lab-result">
+                            <p class="lab-result-title">Duração da Exposição:</p>
+                            <p class="lab-explanation">
+                                A duração da exposição é um fator importante, mas isoladamente não é suficiente para calcular o risco individual. Outros fatores como distância, potência e frequência também influenciam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Simulador D: Cenários -->
+                    <div class="lab-card lab-card-wide">
+                        <h3>🔄 Comparador de Cenários</h3>
+                        <div class="scenario-grid">
+                            <div class="scenario-item">
+                                <div class="scenario-icon">📱</div>
+                                <h4>Celular na orelha</h4>
+                                <p>Exposição máxima na região da cabeça</p>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🔊</div>
+                                <h4>Viva-voz</h4>
+                                <p>Exposição reduzida - aparelho afastado</p>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🎧</div>
+                                <h4>Fones de ouvido</h4>
+                                <p>Exposição reduzida - aparelho afastado da cabeça</p>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">📲</div>
+                                <h4>Celular na mesa</h4>
+                                <p>Exposição mínima - maior distância do corpo</p>
+                            </div>
+                        </div>
+                        <p class="lab-note">
+                            Manter o celular afastado do corpo reduz significativamente a exposição, pois a intensidade do campo diminui rapidamente com a distância.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section id="quiz" class="section section-quiz">
+            <div class="container">
+                <div id="quiz-intro" class="quiz-intro">
+                    <h2 class="section-title">Quiz Científico</h2>
+                    <p class="section-intro">
+                        Teste seus conhecimentos sobre radiação de celulares, efeitos na saúde e evidências científicas.
+                    </p>
+                    <div class="quiz-info">
+                        <p><strong>15 perguntas</strong> divididas em 3 níveis:</p>
+                        <ul>
+                            <li>Nível 1: Fundamentos</li>
+                            <li>Nível 2: Ciência e Saúde</li>
+                            <li>Nível 3: Interpretação de Evidências</li>
+                        </ul>
+                    </div>
+                    <button id="start-quiz" class="btn btn-primary btn-large">Iniciar Quiz</button>
+                </div>
+
+                <div id="quiz-content" class="quiz-content" style="display: none;">
+                    <div class="quiz-header">
+                        <span class="quiz-progress-text">Questão <span id="current-question">1</span> de <span id="total-questions">15</span></span>
+                        <span class="quiz-level">Nível: <span id="quiz-level">Fundamentos</span></span>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 6.67%"></div>
+                    </div>
+
+                    <div class="quiz-card">
+                        <h3 id="quiz-question" class="quiz-question"></h3>
+                        <div id="quiz-options" class="quiz-options" role="radiogroup" aria-label="Opções de resposta">
+                            <!-- Options will be inserted via JavaScript -->
+                        </div>
+                        <div id="quiz-feedback" class="quiz-feedback" style="display: none;" role="status" aria-live="polite">
+                            <p id="feedback-result" class="feedback-result"></p>
+                            <p id="feedback-explanation" class="feedback-explanation"></p>
+                            <p id="feedback-reference" class="feedback-reference"></p>
+                            <button id="next-question" class="btn btn-primary">Próxima Questão</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="quiz-result" style="display: none;">
+                    <h2 class="section-title">Resultado do Quiz</h2>
+                    <div class="result-score">
+                        <span id="final-score">0</span> / <span id="final-total">15</span>
+                    </div>
+                    <p id="result-classification" class="result-classification"></p>
+                    <p id="result-message" class="result-message"></p>
+                    <div class="result-buttons">
+                        <button id="restart-quiz" class="btn btn-primary">Refazer Quiz</button>
+                        <a href="#entenda" class="btn btn-secondary">Revisar Conteúdo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fontes -->
+        <section id="fontes" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Fontes e Referências</h2>
+                <p class="section-intro">
+                    Todas as informações deste site são baseadas em fontes científicas e institucionais verificáveis.
+                </p>
+
+                <div class="sources-list">
+                    <div class="source-item">
+                        <h3>IARC Monographs Volume 102</h3>
+                        <p><strong>Instituição:</strong> International Agency for Research on Cancer</p>
+                        <p><strong>Ano:</strong> 2013</p>
+                        <p><strong>Tipo:</strong> Monografia científica</p>
+                        <p><strong>Resumo:</strong> Avaliação de campos eletromagnéticos de radiofrequência e sua possível carcinogenicidade.</p>
+                        <a href="https://monographs.iarc.who.int/monograph/M102" target="_blank" rel="noopener" class="source-link">Acessar fonte →</a>
+                    </div>
+
+                    <div class="source-item">
+                        <h3>Campos Eletromagnéticos e Saúde Pública: Telefones Móveis</h3>
+                        <p><strong>Instituição:</strong> Organização Mundial da Saúde (OMS)</p>
+                        <p><strong>Ano:</strong> 2014</p>
+                        <p><strong>Tipo:</strong> Folha informativa</p>
+                        <p><strong>Resumo:</strong> Revisão das evidências científicas sobre os efeitos dos telefones móveis na saúde.</p>
+                        <a href="https://www.who.int/news-room/fact-sheets/detail/electromagnetic-fields-and-public-health-mobile-phones" target="_blank" rel="noopener" class="source-link">Acessar fonte →</a>
+                    </div>
+
+                    <div class="source-item">
+                        <h3>Exposição Humana a Campos Eletromagnéticos</h3>
+                        <p><strong>Instituição:</strong> Agência Nacional de Telecomunicações (Anatel)</p>
+                        <p><strong>Ano:</strong> 2022</p>
+                        <p><strong>Tipo:</strong> Regulamentação técnica</p>
+                        <p><strong>Resumo:</strong> Diretrizes e limites de exposição humana a campos eletromagnéticos no Brasil.</p>
+                        <a href="https://www.gov.br/anatel/pt-br/regulado/frequencia-e-radiofrequencia/campos-eletromagneticos" target="_blank" rel="noopener" class="source-link">Acessar fonte →</a>
+                    </div>
+
+                    <div class="source-item">
+                        <h3>Radio Frequency Safety</h3>
+                        <p><strong>Instituição:</strong> Federal Communications Commission (FCC)</p>
+                        <p><strong>Ano:</strong> 2021</p>
+                        <p><strong>Tipo:</strong> Guia de segurança</p>
+                        <p><strong>Resumo:</strong> Informações sobre segurança em radiofrequência e limites de exposição.</p>
+                        <a href="https://www.fcc.gov/general/radio-frequency-safety-0" target="_blank" rel="noopener" class="source-link">Acessar fonte →</a>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <p><strong>Aviso:</strong> Este site tem finalidade estritamente educativa e de divulgação científica. As informações aqui contidas não substituem orientação médica profissional. Última revisão científica: Outubro de 2026.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Este site tem finalidade estritamente educativa e de divulgação científica. As informações aqui contidas não substituem orientação médica profissional.</p>
+            <p>Última revisão científica: Outubro de 2026. Baseado em diretrizes da OMS, IARC e Anatel.</p>
+            <p class="footer-copyright">© 2026 Projeto BioEletro. Código aberto para fins educativos.</p>
+        </div>
+    </footer>
+
+    <!-- Accessibility Panel -->
+    <div class="accessibility-panel">
+        <button id="accessibility-toggle" class="accessibility-toggle" aria-label="Abrir painel de acessibilidade" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="10" r="3"></circle>
+                <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
+            </svg>
+        </button>
+        <div id="accessibility-menu" class="accessibility-menu" role="dialog" aria-label="Configurações de acessibilidade" style="display: none;">
+            <div class="accessibility-header">
+                <h3>Acessibilidade</h3>
+                <button id="close-accessibility" aria-label="Fechar painel">✕</button>
+            </div>
+            <div class="accessibility-options">
+                <div class="accessibility-option">
+                    <label>Tamanho do Texto</label>
+                    <div class="text-size-controls">
+                        <button id="decrease-text" aria-label="Diminuir tamanho do texto">A-</button>
+                        <button id="increase-text" aria-label="Aumentar tamanho do texto">A+</button>
+                    </div>
+                </div>
+                <div class="accessibility-option">
+                    <label>Alto Contraste</label>
+                    <button id="toggle-contrast" class="toggle-btn" role="switch" aria-checked="false">
+                        <span class="toggle-slider"></span>
+                    </button>
+                </div>
+                <div class="accessibility-option">
+                    <label>Reduzir Animações</label>
+                    <button id="toggle-motion" class="toggle-btn" role="switch" aria-checked="false">
+                        <span class="toggle-slider"></span>
+                    </button>
+                </div>
+                <div class="accessibility-option">
+                    <label>Espaçamento de Linha</label>
+                    <button id="toggle-line-height" class="toggle-btn" role="switch" aria-checked="false">
+                        <span class="toggle-slider"></span>
+                    </button>
+                </div>
+                <button id="reset-accessibility" class="reset-btn">Restaurar padrões</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
