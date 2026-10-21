@@ -5,12 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site educativo sobre radiação de celulares, efeitos na saúde e evidências científicas">
     <title>BioEletro - Entenda a Radiação dos Celulares</title>
+    
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fallback: CSS Inline caso o arquivo externo não carregue -->
+    <style id="fallback-styles">
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background-color: #F8F9FA;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Hero básico */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0A192F;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .text-cyan {
+            color: #00E5FF;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: #007BFF;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00E5FF;
+            color: #00E5FF;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Mensagem de debug */
+        #css-debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 9999;
+            font-size: 12px;
+            display: none;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Debug: Mostra se o CSS carregou -->
+    <div id="css-debug">✓ CSS carregado com sucesso</div>
+
     <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
@@ -543,6 +641,25 @@
         </div>
     </div>
 
+    <!-- Script -->
     <script src="script.js"></script>
+    
+    <!-- Script de Debug -->
+    <script>
+        // Verifica se o CSS externo carregou
+        window.addEventListener('load', function() {
+            const debug = document.getElementById('css-debug');
+            const styles = window.getComputedStyle(document.body);
+            
+            // Se o background-color for diferente do fallback, o CSS externo carregou
+            if (styles.backgroundColor !== 'rgb(248, 249, 250)') {
+                debug.style.display = 'block';
+                setTimeout(() => {
+                    debug.style.opacity = '0';
+                    setTimeout(() => debug.style.display = 'none', 500);
+                }, 3000);
+            }
+        });
+    </script>
 </body>
 </html>
